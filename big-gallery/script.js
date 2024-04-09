@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   document.querySelectorAll('.slr2-big-gallery .swiper').forEach((swiper) => {
-    let delay = '3s';
+    let delay = 3000;
     let timer = swiper.querySelector('.swiper-timer');
 
     new Swiper(swiper, {
