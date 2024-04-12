@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   document.querySelectorAll('.slr2-big-gallery .swiper').forEach((swiper) => {
-    let delay = 3000;
+    let delay = 1 * swiper.getAttribute('data-delay');
     let timer = swiper.querySelector('.swiper-timer');
 
     new Swiper(swiper, {
@@ -30,6 +30,20 @@ window.addEventListener('load', () => {
         el: '.swiper-scrollbar',
       },
       on: {
+        afterInit: () => {
+          //set time to the detay attribute
+          let swiperId = swiper
+            .querySelector('.swiper-wrapper')
+            .getAttribute('id');
+          let styleTag = document.createElement('style');
+          styleTag.textContent = `
+          .slr-main-gallery #${swiperId} ~ .swiper-timer--animate {
+            -webkit-transition-duration: ${delay}ms;
+            transition-duration: ${delay}ms;
+          }
+        `;
+          document.head.appendChild(styleTag);
+        },
         transitionStart: () => {
           if (!timer) return;
           timer.classList.remove('swiper-timer--animate');
