@@ -6,7 +6,6 @@
   --slr2-big-gallery-bullet-color: --slr2-color-primary;
   --slr2-big-gallery-timer-width: 1px;
   --slr2-big-gallery-timer-color: --slr2-color-primary;
-  --slr2-big-gallery-delay: 3s;
 }
 
 .slr2-big-gallery .swiper-slide {
@@ -54,10 +53,6 @@
     var(--slr2-big-gallery-timer-color);
   width: 0;
   z-index: 10;
-}
-.slr2-big-gallery .swiper-timer--animate {
-  -webkit-transition: width var(--slr2-big-gallery-delay) linear;
-  transition: width var(--slr2-big-gallery-delay) linear;
 }
 @media (min-width: 768px) {
   .slr2-big-gallery .swiper-button-next,
