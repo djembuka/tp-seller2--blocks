@@ -1,11 +1,11 @@
-.slr2-big-gallery {
+:root {
   --slr2-big-gallery-hight: 500px;
-  --slr2-big-gallery-button-size: 16px;
-  --slr2-big-gallery-button-color: --slr2-color-primary;
+  --slr2-big-gallery-button-size: 48px;
+  --slr2-big-gallery-button-color: var(--slr2-color-primary);
   --slr2-big-gallery-bullet-size: 8px;
-  --slr2-big-gallery-bullet-color: --slr2-color-primary;
+  --slr2-big-gallery-bullet-color: var(--slr2-color-primary);
   --slr2-big-gallery-timer-width: 1px;
-  --slr2-big-gallery-timer-color: --slr2-color-primary;
+  --slr2-big-gallery-timer-color: var(--slr2-color-primary);
 }
 
 .slr2-big-gallery .swiper-slide {
@@ -49,10 +49,13 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-top: var(--slr2-big-gallery-timer-width) solid
-    var(--slr2-big-gallery-timer-color);
+  border-top: 1px solid var(--slr2-big-gallery-timer-color);
   width: 0;
   z-index: 10;
+}
+.slr2-big-gallery .swiper-timer--animate {
+  -webkit-transition: width 3s linear;
+  transition: width 3s linear;
 }
 @media (min-width: 768px) {
   .slr2-big-gallery .swiper-button-next,
