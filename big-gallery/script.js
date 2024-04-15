@@ -36,11 +36,10 @@ window.addEventListener('load', () => {
             .querySelector('.swiper-wrapper')
             .getAttribute('id');
           let styleTag = document.createElement('style');
-          let delaySeconds = Math.round(delay / 1000);
           styleTag.textContent = `
           .slr2-big-gallery #${swiperId} ~ .swiper-timer--animate {
-            -webkit-transition-duration: ${delaySeconds}s;
-            transition-duration: ${delaySeconds}s;
+            -webkit-transition-duration: ${delay}ms;
+            transition-duration: ${delay}ms;
           }
         `;
           document.head.appendChild(styleTag);
