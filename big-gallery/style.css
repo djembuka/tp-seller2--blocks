@@ -49,7 +49,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-top: 1px solid var(--slr2-big-gallery-timer-color);
+  border-top: var(--slr2-big-gallery-timer-width) solid
+    var(--slr2-big-gallery-timer-color);
   width: 0;
   z-index: 10;
 }
