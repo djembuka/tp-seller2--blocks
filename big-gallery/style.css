@@ -1,5 +1,5 @@
 .slr2-big-gallery {
-  --slr2-big-gallery-hight: 500px;
+  --slr2-big-gallery-height: 500px;
   --slr2-big-gallery-button-size: 48px;
   --slr2-big-gallery-button-color: var(--slr2-color-primary);
   --slr2-big-gallery-bullet-size: 8px;
@@ -9,14 +9,14 @@
 }
 
 .slr2-big-gallery .swiper-slide {
-  height: var(--slr2-big-gallery-hight);
+  height: var(--slr2-big-gallery-height);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slr2-big-gallery .swiper-slide img {
   width: 100%;
-  height: var(--slr2-big-gallery-hight);
+  height: var(--slr2-big-gallery-height);
   object-fit: cover;
 }
 .slr2-big-gallery .swiper-lazy-preloader {
