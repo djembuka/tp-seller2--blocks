@@ -6,8 +6,13 @@
   --slr2-big-gallery-bullet-color: var(--slr2-color-primary);
   --slr2-big-gallery-timer-width: 1px;
   --slr2-big-gallery-timer-color: var(--slr2-color-primary);
+  --slr2-big-gallery-border-radius: var(--slr2-border-radius);
 }
 
+.slr2-big-gallery {
+  border-radius: var(--slr2-big-gallery-border-radius);
+  overflow: hidden;
+}
 .slr2-big-gallery .swiper-slide {
   height: var(--slr2-big-gallery-height);
   background-repeat: no-repeat;

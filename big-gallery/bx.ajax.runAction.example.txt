@@ -95,6 +95,18 @@
               hint_internal: 'Введите любое число',
               hint_external: 'Задержка между слайдами в ms, например 3000',
             },
+            {
+              property: 'text',
+              id: 'id1',
+              name: 'BANNER_RADIUS',
+              label: 'Скругление углов',
+              value: '10',
+              regexp: '^(\d+)$',
+              regexp_description:
+                'Значение поля - любое число',
+              hint_internal: 'Введите любое число',
+              hint_external: 'Скругление углов, например 10',
+            },
           ],
         },
       }
