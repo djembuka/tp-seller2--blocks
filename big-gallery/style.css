@@ -6,7 +6,7 @@
   --slr2-big-gallery-bullet-color: var(--slr2-color-primary);
   --slr2-big-gallery-timer-width: 1px;
   --slr2-big-gallery-timer-color: var(--slr2-color-primary);
-  --slr2-big-gallery-border-radius: var(--slr2-border-radius);
+  --slr2-big-gallery-border-radius: var(--slr2-blocks-radius);
 }
 
 .slr2-big-gallery {
