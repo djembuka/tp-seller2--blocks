@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
   ];
 
   document.querySelectorAll('.slr2-header1').forEach((slr2Header1) => {
-    icons.forEach((iconObj) => {
+    icons.forEach((iconObj, index) => {
       slr2Header1
         .querySelectorAll(`.slr2-header1__${iconObj.name}-icon`)
         .forEach((icon) => {
@@ -45,8 +45,38 @@ window.addEventListener('DOMContentLoaded', () => {
             });
           }
         });
+
+      if (index === 1) {
+        //basket
+        if (window[iconObj.component]) {
+          onBasketChanged(
+            slr2Header1,
+            iconObj,
+            window[iconObj.component].getCount()
+          );
+        }
+        document.documentElement.addEventListener(
+          'slr2BasketCountChanged',
+          (e) => {
+            onBasketChanged(slr2Header1, iconObj, e.detail.count);
+          }
+        );
+      }
     });
   });
+
+  function onBasketChanged(header, iconObj, count) {
+    header
+      .querySelectorAll(`.slr2-header1__${iconObj.name}-icon`)
+      .forEach((basket) => {
+        if (Number(count) > 0 && basket.querySelector('span')) {
+          basket.querySelector('span').textContent = count;
+          basket.classList.add('slr2-header1__basket-full');
+        } else {
+          basket.classList.remove('slr2-header1__basket-full');
+        }
+      });
+  }
 
   function onComponentLoaded(icon, iconObj) {
     icon.classList.remove('slr2--icon-preloader');

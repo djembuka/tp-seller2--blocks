@@ -33,7 +33,7 @@
   ];
 
   setTimeout(() => {
-    components.forEach((componentObj) => {
+    components.forEach((componentObj, index) => {
       const event = new Event(componentObj.event);
       document.documentElement.dispatchEvent(event);
 
@@ -43,6 +43,20 @@
         div.textContent = componentObj.message;
         document.querySelector('body').appendChild(div);
       };
+
+      if (index === 1) {
+        //basket
+        window[componentObj.name].getCount = function () {
+          return 10;
+        };
+
+        setTimeout(() => {
+          const basketEvent = new CustomEvent('slr2BasketCountChanged', {
+            detail: { count: 1012 },
+          });
+          document.documentElement.dispatchEvent(basketEvent);
+        }, 1000);
+      }
     });
   }, 2000);
 })();

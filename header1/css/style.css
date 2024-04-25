@@ -1,5 +1,5 @@
 .slr2-header1 {
-  background-color: var(--slr2-color-primary);
+  background-color: var(--slr2-header1-background-color);
   height: 64px;
 }
 .slr2-header1 .slr2-container {
@@ -34,7 +34,7 @@
 .slr2-header1__menu a,
 .slr2-header1__menu a:hover,
 .slr2-header1__menu a:visited {
-  color: #fff;
+  color: var(--slr2-header1-link-color);
 }
 /*Icons*/
 .slr2-header1__icons {
@@ -53,8 +53,8 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .slr2-header1__profile-icon,
 .slr2-header1__search-icon {
@@ -75,6 +75,33 @@
   width: 32px;
   height: 32px;
 }
+
+.slr2-header1__basket-icon {
+  flex-direction: column;
+}
+.slr2-header1__basket-icon img {
+  width: 20px;
+  height: 20px;
+}
+.slr2-header1__basket-icon span {
+  background-color: var(--slr2-header1-basket-count-background);
+  border-radius: 5px;
+  padding: 0 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--slr2-header1-basket-count-color);
+  font-family: 'Open Sans';
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 10px;
+  margin-top: 2px;
+  height: 10px;
+}
+.slr2-header1__basket-icon.slr2-header1__basket-full span {
+  display: flex;
+}
+
 .slr2-header1__phone-icon {
   order: 1;
 }
@@ -84,15 +111,21 @@
 .slr2-header1__menu-icon {
   order: 3;
 }
+
 .slr2--icon-preloader {
-  background-color: #ffffff33;
+  background-color: var(--slr2-header1-preloader-color);
   width: 32px;
   height: 32px;
   border-radius: 8px;
   cursor: default;
-  background: linear-gradient(45deg, #ffffff33, #ffffff55, #ffffff33);
+  background: linear-gradient(
+    45deg,
+    var(--slr2-header1-preloader-color),
+    var(--slr2-header1-preloader-shine),
+    var(--slr2-header1-preloader-color)
+  );
   background-size: 400% 400%;
-  animation: gradient 4s ease infinite;
+  animation: gradient 2s ease infinite;
   transform: translate3d(0, 0, 0);
 }
 .slr2--icon-preloader:hover {
@@ -100,6 +133,15 @@
 }
 .slr2--icon-preloader img {
   display: none;
+}
+
+.slr2-header1__phone-icon {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.slr2-header1__phone-icon:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 @media (min-width: 768px) {
@@ -129,12 +171,12 @@
 }
 @keyframes gradient {
   0% {
-    background-position: 0% 40%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 40%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 40%;
+    background-position: 0% 50%;
   }
 }
