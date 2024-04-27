@@ -1,6 +1,7 @@
 .slr2-header1 {
   background-color: var(--slr2-header1-background-color);
   height: 64px;
+  margin-bottom: 32px;
 }
 .slr2-header1 .slr2-container {
   height: 100%;
@@ -147,6 +148,7 @@
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
   transform: translate3d(0, 0, 0);
+  pointer-events: none;
 }
 .slr2--icon-preloader:hover {
   opacity: 1;
