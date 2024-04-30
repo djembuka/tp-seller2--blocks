@@ -126,6 +126,33 @@
                 hint_internal: 'Введите число',
                 hint_external: 'Например 400 или 700',
             },
+            {
+                property: 'heading',
+                id: 'id_tags_align_heading',
+                label: 'Выравнивание:',
+            },
+            {
+                property: 'select',
+                type: 'radio',
+                id: 'id_tags_align_radio',
+                name: 'ALIGN',
+                label: 'Выравнивание',
+                options: [
+                    {
+                        label: 'По левому краю',
+                        code: '1',
+                    },
+                    {
+                        label: 'По центру',
+                        code: '2',
+                    },
+                    {
+                        label: 'По правому краю',
+                        code: '3',
+                    },
+                ],
+                value: '1',
+            },
           ],
         },
       }

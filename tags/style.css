@@ -5,7 +5,7 @@
   --slr2-tags-color: #fff;
   --slr2-tags-font-size: 16px;
   --slr2-tags-font-family: 'Open Sans';
-  --slr2-tags-align: flex-start;
+  --slr2-tags-align: flex-start; /*center, flex-end*/
 }
 .slr2-tags-block__container {
   display: flex;
