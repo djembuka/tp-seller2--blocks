@@ -153,6 +153,33 @@
                 ],
                 value: '1',
             },
+            {
+                property: 'heading',
+                id: 'id_tags_type_heading',
+                label: 'Типы тэгов:',
+            },
+            {
+                property: 'select',
+                type: 'radio',
+                id: 'id_tags_type_radio',
+                name: 'TYPE',
+                label: 'Типы тэгов',
+                options: [
+                    {
+                        label: 'Кнопки сплошного цвета',
+                        code: '1',
+                    },
+                    {
+                        label: 'Кнопка прозрачная с контуром',
+                        code: '2',
+                    },
+                    {
+                        label: 'Кнопка с цветом и контуром',
+                        code: '3',
+                    },
+                ],
+                value: '1',
+            },
           ],
         },
       }

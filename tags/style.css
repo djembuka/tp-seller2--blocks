@@ -1,11 +1,19 @@
 .slr2-tags-block {
-  --slr2-tags-border-width: 0;
+  --slr2-tags-border-width: 2px;
   --slr2-tags-border-color: #000;
   --slr2-tags-background-color: #000;
   --slr2-tags-color: #fff;
   --slr2-tags-font-size: 16px;
   --slr2-tags-font-family: 'Open Sans';
   --slr2-tags-align: flex-start; /*center, flex-end*/
+
+  /*если тип тэгов - "Кнопки сплошного цвета"
+  --slr2-tags-border-width: 0;*/
+
+  /*если тип тэгов - "Кнопка прозрачная с контуром"
+  --slr2-tags-background-color: transparent;*/
+
+  /*если тип тэгов - "Кнопка с цветом и контуром"*/
 }
 .slr2-tags-block__container {
   display: flex;
