@@ -383,6 +383,7 @@ body {
   font-family: var(--slr2-custom-font-family);
   font-size: var(--slr2-font-size);
   color: var(--slr2-font-color);
+  background-color: var(--slr2-background-color);
 }
 
 h1 {
